@@ -1,0 +1,19 @@
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  
+  - script: echo "single line echo in azure devops"
+    displayName: "stage-one"
+    
+
+  - script: |
+      echo this is two-line script
+      echo "congrats, you did first demo"
+    displayName: 'stage-two'
